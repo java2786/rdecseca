@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11
+      # java: corretto11
+      java: 20
   pre_build:
     commands:
       - echo Installing dependencies
