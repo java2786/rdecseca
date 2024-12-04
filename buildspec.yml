@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: 20
+  pre_build:
+    commands:
+      - echo Installing dependencies
+      - mvn -B dependency:resolve
+  build:
+    commands:
+      - echo Building the project
+      - mvn -B package
+artifacts:
+  files:
+    - target/my-app.jar
+
