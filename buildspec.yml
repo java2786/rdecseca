@@ -8,6 +8,7 @@ phases:
     commands:
       - echo Installing dependencies
       - mvn -B dependency:resolve
+      - chmod +x scripts/*.sh	
   build:
     commands:
       - echo Building the project
@@ -15,4 +16,5 @@ phases:
 artifacts:
   files:
     - target/my-app.jar
-
+    - appspec.yml
+    - scripts/*
